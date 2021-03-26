@@ -1,6 +1,6 @@
 {
-    "name": "bshaffer/oauth2-server-httpfoundation-bridge",
-    "description":"A bridge to HttpFoundation for oauth2-server-php",
+    "name": "micropole-idea/oauth2-server-httpfoundation-bridge",
+    "description":"Symfony 4 bridge to HttpFoundation for oauth2-server-php",
     "keywords":["oauth","oauth2","auth","httpfoundation"],
     "type":"library",
     "license":"MIT",
@@ -11,7 +11,7 @@
             "homepage":"http://brentertainment.com"
         }
     ],
-    "homepage": "http://github.com/bshaffer/oauth2-server-httpfoundation-bridge",
+    "homepage": "http://github.com/micropole-idea/oauth2-server-httpfoundation-bridge",
     "require":{
         "php":">=7.2.0",
         "bshaffer/oauth2-server-php": ">=0.9",
