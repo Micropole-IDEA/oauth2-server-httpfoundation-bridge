@@ -18,7 +18,7 @@ Installation
 ```
 {
     "require": {
-        "bshaffer/oauth2-server-httpfoundation-bridge": "v1.0",
+        "micropole-idea/oauth2-server-httpfoundation-bridge": "v1.0",
         ...
     },
     ...
