@@ -2,9 +2,17 @@
 
 namespace OAuth2\HttpFoundationBridge;
 
-class RequestTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+/**
+ * Class RequestTest
+ */
+class RequestTest extends TestCase
 {
-    public function testFixAuthHeader()
+    /**
+     * testFixAuthHeader
+     */
+    public function testFixAuthHeader(): void
     {
         require_once __DIR__ .'/../../includes/apache_request_headers.php';
 
@@ -15,3 +23,4 @@ class RequestTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('Bearer xyz', $request->headers('Authorization'));
     }
 }
+

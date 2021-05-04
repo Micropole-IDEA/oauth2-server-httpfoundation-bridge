@@ -1,9 +1,9 @@
 oauth2-server-httpfoundation-bridge
 ===================================
 
-A bridge to [HttpFoundation](https://github.com/symfony/httpfoundation) for [oauth2-server-php](https://github.com/bshaffer/oauth2-server-php).
+Fork A bridge to [HttpFoundation](https://github.com/symfony/httpfoundation) for [oauth2-server-php](https://github.com/bshaffer/oauth2-server-php).
 
-[![Build Status](https://secure.travis-ci.org/bshaffer/oauth2-server-httpfoundation-bridge.png)](http://travis-ci.org/bshaffer/oauth2-server-httpfoundation-bridge)
+[![Build Status](https://secure.travis-ci.org/Micropole-IDEA/oauth2-server-httpfoundation-bridge.png)](http://travis-ci.org/Micropole-IDEA/oauth2-server-httpfoundation-bridge)
 
 `oauth2-server-httpfoundation-bridge` is a wrapper for [oauth2-server-php](https://github.com/bshaffer/oauth2-server-php)
 which returns `Symfony\Component\HttpFoundation\Response` instead of `OAuth2\Response`, and uses `Symfony\Component\HttpFoundation\Request` instead of `OAuth2\Request`.
@@ -18,17 +18,16 @@ Installation
 ```
 {
     "require": {
-        "bshaffer/oauth2-server-httpfoundation-bridge": "v1.0",
+        "micropole-idea/oauth2-server-httpfoundation-bridge": "v1.0",
         ...
     },
     ...
 }
 ```
 
-And then run `composer.phar install`
+And then run `composer install`
 
 > Match tags with the [oauth2-server-php](https://github.com/bshaffer/oauth2-server-php) library when possible.
-> [`v1.1`](https://github.com/bshaffer/oauth2-server-httpfoundation-bridge/tree/v1.1) is the latest tag.
 
 ## Creating the request
 

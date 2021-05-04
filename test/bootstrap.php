@@ -1,18 +1,14 @@
 <?php
 
-if (file_exists($autoload_file = __DIR__.'/../vendor/autoload.php')) {
-    require_once $autoload_file;
+if (!file_exists($autoload_file = __DIR__ . '/../vendor/autoload.php')) {
+    if (empty($_SERVER['OAUTH2BUNDLE_VENDOR_AUTOLOAD'])) {
+        throw new Exception(
+            'You must run composer.phar install, '
+            . 'or set the OAUTH2BUNDLE_VENDOR_AUTOLOAD environment variable in your phpunit.xml to run the bundle tests'
+        );
+    }
+
+    $autoload_file = $_SERVER['OAUTH2BUNDLE_VENDOR_AUTOLOAD'];
 }
 
-// Allows us to test across multiple versions of PHPUnit
-if (!class_exists('\PHPUnit\Framework\TestCase', true)) {
-    class_alias(
-        '\PHPUnit_Framework_TestCase',
-        '\PHPUnit\Framework\TestCase'
-    );
-} elseif (!class_exists('\PHPUnit_Framework_TestCase', true)) {
-    class_alias(
-        '\PHPUnit\Framework\TestCase',
-        '\PHPUnit_Framework_TestCase'
-    );
-}
+require_once $autoload_file;
